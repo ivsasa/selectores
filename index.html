@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzeria WebFerrol</title>
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+    <h1 class="title">Pizzería WebFerrol</h1>
+
+    <main class="main-content">
+
+        <table class="table">
+            <tr>
+                <th colspan="2">Tarifa de precios</th>
+            </tr>
+            <tr>
+                <td>Jamón y queso</td>
+                <td>4€</td>
+            </tr>
+            <tr>
+                <td>Mozzarella</td>
+                <td>3€</td>
+            </tr>
+            <tr>
+                <td>Morrones</td>
+                <td>2€</td>
+            </tr>
+            <tr>
+                <td colspan="2">Los precios son revisados una vez a la semana</td>
+            </tr>
+
+        </table>
+
+        <section class="tarifa">
+
+        <label for="pizzas">Pizzas</label>
+        <select name="pizzas" id="pizzas" >    
+        <option value="4€">
+            Jamón y queso
+        </option>
+        <option value="3€">
+            Mozzarella
+        </option>
+        <option value="2€">
+            Morrones
+        </option>
+        </select>
+
+        <br>
+
+        <label for="precios">Precios</label>
+        <input type="text" name="precio" id="precio">
+
+        </section>
+
+
+    </main>
+    
+                
+    <script>
+
+        const selector = document.querySelector("#pizzas");
+
+        const mostrarValor = () =>{
+            const valor = document.querySelector("#pizzas").value;
+            console.log(valor)
+        }
+
+        const mostrarTexto = () =>{
+            const indice = document.querySelector("#pizzas").selectedIndex;
+            const texto = document.querySelector("#pizzas").options[indice].text;
+            console.log(texto)
+        }
+
+        selector.onchange = () =>{
+            document.querySelector("#precio").value = selector.value;
+        }
+
+        
+         
+
+    </script>
+
+
+
+</body>
+</html>

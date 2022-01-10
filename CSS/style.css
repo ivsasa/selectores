@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+.title{
+    text-align: center;
+    margin-top: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(138, 26, 6);
+    color: rgb(255, 255, 255);
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table,td,tr,.tarifa{
+    border: 1px solid black;
+}
+
+td,th{
+    padding: 0.5em;
+}
+
+.main-content{
+    margin: 1em auto;
+    width: 90vw;
+    max-width: 800px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+}
+
+
+table, .tarifa{
+    float: left;
+    width: 50%;
+}
+
